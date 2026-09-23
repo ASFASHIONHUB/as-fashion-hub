@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AS FASHION HUB — Everyday pieces, made to move</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="shop.css" />
+</head>
+<body>
+  <div class="announcement">Free delivery on orders over $100 <span>·</span> Easy 30-day returns</div>
+  <header class="shop-header">
+    <button class="mobile-menu" aria-label="Open menu">☰</button>
+    <a class="shop-logo" href="shop.html"><span>AS</span> FASHION HUB</a>
+    <nav aria-label="Shop navigation"><a href="#shop" data-shop-filter="all">Shop all</a><a href="#shop" data-shop-filter="men">Men</a><a href="#shop" data-shop-filter="women">Women</a><a href="#shop" data-shop-filter="children">Children & toys</a></nav>
+    <div class="shop-actions"><button class="shop-search" aria-label="Search">⌕</button><button class="bag-button" aria-label="Shopping bag">Bag <b id="bag-count">0</b></button></div>
+  </header>
+  <main>
+    <section class="hero-shop">
+      <div class="hero-copy"><p class="eyebrow">The everyday edit · 2026</p><h1>Good clothes.<br><em>Good energy.</em></h1><p>Easy pieces for every person, every day. Discover considered fashion and joyful toys made to live in.</p><a class="shop-cta" href="#shop">Shop the edit <span>↗</span></a></div>
+      <div class="hero-art"><div class="art-circle"></div><div class="art-tag">AS / 01</div><div class="art-card card-one"><span>NEW</span><b>Layer<br>lightly.</b></div><div class="art-card card-two"><span>FAMILY</span><b>Play<br>freely.</b></div></div>
+    </section>
+    <section class="category-strip" aria-label="Collections"><a href="#shop" data-shop-filter="women"><span class="category-art art-women"></span><b>Women</b><small>Soft tailoring & daily layers</small></a><a href="#shop" data-shop-filter="men"><span class="category-art art-men"></span><b>Men</b><small>Relaxed staples & outerwear</small></a><a href="#shop" data-shop-filter="children"><span class="category-art art-kids"></span><b>Children & toys</b><small>Little looks & big imagination</small></a></section>
+    <section class="shop-section" id="shop"><div class="shop-heading"><div><p class="eyebrow">Curated for real life</p><h2>Find your next favourite</h2></div><div class="shop-filters"><button class="shop-filter active" data-shop-filter="all">All</button><button class="shop-filter" data-shop-filter="women">Women</button><button class="shop-filter" data-shop-filter="men">Men</button><button class="shop-filter" data-shop-filter="children">Children & toys</button></div></div>
+      <div class="product-grid">
+        <article class="product-card" data-product-category="women"><div class="product-art product-knit"><span class="product-badge">BESTSELLER</span><button class="heart" aria-label="Save Everyday rib knit">♡</button></div><div class="product-info"><div><b>Everyday rib knit</b><small>Women · Oat</small></div><strong>$96</strong></div><button class="add-bag" data-product="Everyday rib knit">Add to bag</button></article>
+        <article class="product-card" data-product-category="men"><div class="product-art product-jacket"><button class="heart" aria-label="Save Studio chore jacket">♡</button></div><div class="product-info"><div><b>Studio chore jacket</b><small>Men · Indigo</small></div><strong>$188</strong></div><button class="add-bag" data-product="Studio chore jacket">Add to bag</button></article>
+        <article class="product-card" data-product-category="women"><div class="product-art product-blouse"><button class="heart" aria-label="Save Soft drape blouse">♡</button></div><div class="product-info"><div><b>Soft drape blouse</b><small>Women · Sky</small></div><strong>$88</strong></div><button class="add-bag" data-product="Soft drape blouse">Add to bag</button></article>
+        <article class="product-card" data-product-category="children"><div class="product-art product-toy"><span class="product-badge orange">NEW</span><button class="heart" aria-label="Save Rainbow knit buddy">♡</button></div><div class="product-info"><div><b>Rainbow knit buddy</b><small>Children & toys · Multi</small></div><strong>$36</strong></div><button class="add-bag" data-product="Rainbow knit buddy">Add to bag</button></article>
+      </div>
+    </section>
+    <section class="story-band"><div><p class="eyebrow">Small shop, thoughtful choices</p><h2>Made for your<br><em>whole household.</em></h2></div><p>We choose pieces that work hard, feel good, and make room for a little more joy. From first layers to after-school playtime, AS FASHION HUB is here for the everyday.</p><a href="#shop">Explore the edit ↗</a></section>
+  </main>
+  <footer><a class="shop-logo" href="shop.html"><span>AS</span> FASHION HUB</a><p>Everyday pieces for every kind of life.</p><div><a href="index.html">Store management</a><a href="#shop">Shop</a><a href="#shop">Contact</a></div></footer>
+  <div class="cart-toast" id="cart-toast">Added to your bag <span>✓</span></div>
+  <script src="shop.js"></script>
+</body>
+</html>
