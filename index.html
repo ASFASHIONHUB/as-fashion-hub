@@ -1,89 +1,40 @@
 <!DOCTYPE html>
-<!--
-THESIS: Atelier OS turns daily clothing operations into one calm, legible working surface instead of a pile of separate reports.
-OWN-WORLD: Bone paper, ink-black rails, cobalt actions, and safety-orange exceptions echo garment-room labels and warehouse markers.
-STORY: The owner sees what needs attention, checks the health of the shop, and moves directly into inventory or orders.
-FIRST VIEWPORT: A left rail frames a wide dashboard; the inventory table owns the center while alerts and live orders stay visible at the right edge.
-FORM: Operate / workstation board, chosen for fast scanning and decisive handoffs.
--->
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AS FASHION HUB — Store management</title>
+  <title>AS FASHION HUB — Everyday pieces, made to move</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="shop.css" />
 </head>
 <body>
-  <div class="app-shell">
-    <aside class="sidebar">
-      <div class="brand"><span class="brand-mark">A</span><span>AS FASHION HUB</span></div>
-      <div class="store-switcher"><span class="store-avatar">AS</span><span><b>AS FASHION HUB</b><small>Fashion storefront</small></span><span class="chevron">⌄</span></div>
-      <nav aria-label="Main navigation">
-        <p class="nav-label">Workspace</p>
-        <button class="nav-item active" data-view="overview"><span>◈</span> Overview</button>
-        <button class="nav-item" data-view="inventory"><span>▦</span> Inventory <em>3</em></button>
-        <button class="nav-item" data-view="orders"><span>↗</span> Orders</button>
-        <button class="nav-item" data-view="customers"><span>◎</span> Customers</button>
-        <p class="nav-label nav-spaced">Manage</p>
-        <button class="nav-item" data-view="analytics"><span>⌁</span> Analytics</button>
-        <button class="nav-item" data-view="team"><span>♧</span> Team</button>
-        <button class="nav-item" data-view="settings"><span>⚙</span> Settings</button>
-      </nav>
-      <div class="sidebar-foot">
-        <div class="help-card"><span class="help-icon">?</span><div><b>Need a hand?</b><small>Visit the help desk</small></div><span>↗</span></div>
-        <div class="user-row"><span class="user-avatar">MT</span><span><b>Maya Thompson</b><small>Owner</small></span><button aria-label="More options">•••</button></div>
+  <div class="announcement">Free delivery on orders over $100 <span>·</span> Easy 30-day returns</div>
+  <header class="shop-header">
+    <button class="mobile-menu" aria-label="Open menu">☰</button>
+    <a class="shop-logo" href="shop.html"><span>AS</span> FASHION HUB</a>
+    <nav aria-label="Shop navigation"><a href="#shop" data-shop-filter="all">Shop all</a><a href="#shop" data-shop-filter="men">Men</a><a href="#shop" data-shop-filter="women">Women</a><a href="#shop" data-shop-filter="children">Children & toys</a></nav>
+    <div class="shop-actions"><button class="shop-search" aria-label="Search">⌕</button><button class="bag-button" aria-label="Shopping bag">Bag <b id="bag-count">0</b></button></div>
+  </header>
+  <main>
+    <section class="hero-shop">
+      <div class="hero-copy"><p class="eyebrow">The everyday edit · 2026</p><h1>Good clothes.<br><em>Good energy.</em></h1><p>Easy pieces for every person, every day. Discover considered fashion and joyful toys made to live in.</p><a class="shop-cta" href="#shop">Shop the edit <span>↗</span></a></div>
+      <div class="hero-art"><div class="art-circle"></div><div class="art-tag">AS / 01</div><div class="art-card card-one"><span>NEW</span><b>Layer<br>lightly.</b></div><div class="art-card card-two"><span>FAMILY</span><b>Play<br>freely.</b></div></div>
+    </section>
+    <section class="category-strip" aria-label="Collections"><a href="#shop" data-shop-filter="women"><span class="category-art art-women"></span><b>Women</b><small>Soft tailoring & daily layers</small></a><a href="#shop" data-shop-filter="men"><span class="category-art art-men"></span><b>Men</b><small>Relaxed staples & outerwear</small></a><a href="#shop" data-shop-filter="children"><span class="category-art art-kids"></span><b>Children & toys</b><small>Little looks & big imagination</small></a></section>
+    <section class="shop-section" id="shop"><div class="shop-heading"><div><p class="eyebrow">Curated for real life</p><h2>Find your next favourite</h2></div><div class="shop-filters"><button class="shop-filter active" data-shop-filter="all">All</button><button class="shop-filter" data-shop-filter="women">Women</button><button class="shop-filter" data-shop-filter="men">Men</button><button class="shop-filter" data-shop-filter="children">Children & toys</button></div></div>
+      <div class="product-grid">
+        <article class="product-card" data-product-category="women"><div class="product-art product-knit"><span class="product-badge">BESTSELLER</span><button class="heart" aria-label="Save Everyday rib knit">♡</button></div><div class="product-info"><div><b>Everyday rib knit</b><small>Women · Oat</small></div><strong>$96</strong></div><button class="add-bag" data-product="Everyday rib knit">Add to bag</button></article>
+        <article class="product-card" data-product-category="men"><div class="product-art product-jacket"><button class="heart" aria-label="Save Studio chore jacket">♡</button></div><div class="product-info"><div><b>Studio chore jacket</b><small>Men · Indigo</small></div><strong>$188</strong></div><button class="add-bag" data-product="Studio chore jacket">Add to bag</button></article>
+        <article class="product-card" data-product-category="women"><div class="product-art product-blouse"><button class="heart" aria-label="Save Soft drape blouse">♡</button></div><div class="product-info"><div><b>Soft drape blouse</b><small>Women · Sky</small></div><strong>$88</strong></div><button class="add-bag" data-product="Soft drape blouse">Add to bag</button></article>
+        <article class="product-card" data-product-category="children"><div class="product-art product-toy"><span class="product-badge orange">NEW</span><button class="heart" aria-label="Save Rainbow knit buddy">♡</button></div><div class="product-info"><div><b>Rainbow knit buddy</b><small>Children & toys · Multi</small></div><strong>$36</strong></div><button class="add-bag" data-product="Rainbow knit buddy">Add to bag</button></article>
       </div>
-    </aside>
-
-    <main class="main-content">
-      <header class="topbar">
-        <div class="breadcrumb"><span id="page-kicker">Workspace</span><span>/</span><b id="page-title">Overview</b></div>
-        <div class="top-actions"><button class="icon-button" aria-label="Search">⌕</button><button class="icon-button has-dot" aria-label="Notifications">♢</button><button class="primary-button" id="add-product">+ Add product</button></div>
-      </header>
-
-      <div class="content-scroll">
-        <section class="welcome-row">
-          <div><h1>Good morning, Maya <span class="wave">✳</span></h1><p>Here’s what’s happening at AS FASHION HUB today.</p></div>
-          <div class="date-pill"><span>◷</span> Sep 23, 2026 <span class="pill-chevron">⌄</span></div>
-        </section>
-
-        <section class="metric-grid" aria-label="Store summary">
-          <article class="metric-card primary-metric"><div class="metric-head"><span>Net sales</span><span class="trend up">↑ 12.8%</span></div><strong>$24,680<span class="metric-decimal">.00</span></strong><div class="mini-chart"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><small>Compared to $21,892 last week</small></article>
-          <article class="metric-card"><div class="metric-head"><span>Orders</span><span class="trend up">↑ 8.2%</span></div><strong>184</strong><div class="metric-line"><span style="width:76%"></span></div><small>156 fulfilled · 28 in progress</small></article>
-          <article class="metric-card"><div class="metric-head"><span>Average order</span><span class="trend neutral">→ 1.4%</span></div><strong>$134<span class="metric-decimal">.13</span></strong><div class="metric-line cobalt"><span style="width:61%"></span></div><small>Across 184 orders this week</small></article>
-          <article class="metric-card alert-metric"><div class="metric-head"><span>Stock attention</span><span class="alert-dot">!</span></div><strong>12 <small>items</small></strong><div class="alert-list"><span><i class="orange-dot"></i> 3 low stock</span><span><i class="red-dot"></i> 9 out of stock</span></div></article>
-        </section>
-
-        <div class="section-heading"><div><h2>Inventory overview</h2><p>Keep your floor stocked and your best sellers moving.</p></div><div class="collection-filters" aria-label="Shop collections"><button class="collection-filter active" data-category="all">All collections</button><button class="collection-filter" data-category="men">Men</button><button class="collection-filter" data-category="women">Women</button><button class="collection-filter" data-category="children">Children & toys</button><button class="text-button" id="view-inventory">View all <span>↗</span></button></div></div>
-        <section class="workspace-grid">
-          <div class="inventory-panel">
-            <div class="panel-toolbar"><div class="tabs"><button class="tab active" data-filter="all">All products <b>51</b></button><button class="tab" data-filter="low">Low stock <b class="orange">4</b></button><button class="tab" data-filter="out">Out of stock <b class="red">10</b></button></div><label class="search-box"><span>⌕</span><input id="inventory-search" placeholder="Search products..." /></label></div>
-            <div class="table-wrap"><table><thead><tr><th>Product</th><th>Category</th><th>SKU</th><th>Price</th><th>Stock</th><th><span class="sr-only">Action</span></th></tr></thead><tbody id="inventory-body">
-              <tr data-stock="healthy" data-category="men"><td><div class="product-cell"><span class="product-photo photo-jacket"></span><span><b>Studio chore jacket</b><small>Indigo / M</small></span></div></td><td>Men · Outerwear</td><td class="muted">AS-0428</td><td>$188.00</td><td><span class="stock healthy"><i></i> 24 in stock</span></td><td><button class="row-menu">•••</button></td></tr>
-              <tr data-stock="low" data-category="women"><td><div class="product-cell"><span class="product-photo photo-knit"></span><span><b>Everyday rib knit</b><small>Oat / S</small></span></div></td><td>Women · Knitwear</td><td class="muted">AS-0186</td><td>$96.00</td><td><span class="stock low"><i></i> 4 in stock</span></td><td><button class="row-menu restock">Restock</button></td></tr>
-              <tr data-stock="healthy" data-category="men"><td><div class="product-cell"><span class="product-photo photo-shirt"></span><span><b>Boxy cotton shirt</b><small>White / L</small></span></div></td><td>Men · Tops</td><td class="muted">AS-0312</td><td>$74.00</td><td><span class="stock healthy"><i></i> 18 in stock</span></td><td><button class="row-menu">•••</button></td></tr>
-              <tr data-stock="out" data-category="women"><td><div class="product-cell"><span class="product-photo photo-trouser"></span><span><b>Wide leg trouser</b><small>Charcoal / 28</small></span></div></td><td>Women · Bottoms</td><td class="muted">AS-0244</td><td>$142.00</td><td><span class="stock out"><i></i> Out of stock</span></td><td><button class="row-menu restock">Restock</button></td></tr>
-              <tr data-stock="healthy" data-category="women"><td><div class="product-cell"><span class="product-photo photo-bag"></span><span><b>Market canvas tote</b><small>Natural / One size</small></span></div></td><td>Women · Accessories</td><td class="muted">AS-0097</td><td>$42.00</td><td><span class="stock healthy"><i></i> 31 in stock</span></td><td><button class="row-menu">•••</button></td></tr>
-              <tr data-stock="healthy" data-category="men"><td><div class="product-cell"><span class="product-photo photo-trouser"></span><span><b>Relaxed cargo pant</b><small>Olive / 32</small></span></div></td><td>Men · Bottoms</td><td class="muted">AS-0516</td><td>$118.00</td><td><span class="stock healthy"><i></i> 15 in stock</span></td><td><button class="row-menu">•••</button></td></tr>
-              <tr data-stock="low" data-category="women"><td><div class="product-cell"><span class="product-photo photo-shirt"></span><span><b>Soft drape blouse</b><small>Sky / M</small></span></div></td><td>Women · Tops</td><td class="muted">AS-0621</td><td>$88.00</td><td><span class="stock low"><i></i> 3 in stock</span></td><td><button class="row-menu restock">Restock</button></td></tr>
-              <tr data-stock="healthy" data-category="children"><td><div class="product-cell"><span class="product-photo photo-knit"></span><span><b>Rainbow knit buddy</b><small>Multi / One size</small></span></div></td><td>Children · Toys</td><td class="muted">AS-0742</td><td>$36.00</td><td><span class="stock healthy"><i></i> 22 in stock</span></td><td><button class="row-menu">•••</button></td></tr>
-              <tr data-stock="out" data-category="children"><td><div class="product-cell"><span class="product-photo photo-bag"></span><span><b>Mini explorer set</b><small>Natural / 4–7 yrs</small></span></div></td><td>Children · Toys</td><td class="muted">AS-0788</td><td>$54.00</td><td><span class="stock out"><i></i> Out of stock</span></td><td><button class="row-menu restock">Restock</button></td></tr>
-            </tbody></table></div>
-            <div class="table-foot"><span id="table-count">Showing 9 of 51 products</span><div><button class="page-button" disabled>←</button><button class="page-button">→</button></div></div>
-          </div>
-          <aside class="side-stack">
-            <div class="side-panel"><div class="side-panel-head"><h3>Needs attention</h3><button class="more-button">•••</button></div><div class="attention-item"><span class="attention-icon orange">!</span><div><b>Low stock alert</b><p>Everyday rib knit · 4 left</p><button class="inline-action">Review item →</button></div></div><div class="attention-item"><span class="attention-icon red">×</span><div><b>Out of stock</b><p>Wide leg trouser · 0 left</p><button class="inline-action">Restock now →</button></div></div><div class="attention-item"><span class="attention-icon blue">↗</span><div><b>Top performer</b><p>Studio chore jacket is up 28%</p><button class="inline-action">See report →</button></div></div></div>
-            <div class="side-panel orders-panel"><div class="side-panel-head"><h3>Recent orders</h3><button class="more-button">View all ↗</button></div><div class="order-item"><span class="order-avatar pink">AL</span><div><b>#1048 · Alex Lee</b><p>2 items · 12 min ago</p></div><span class="order-status ready">Ready</span></div><div class="order-item"><span class="order-avatar yellow">JR</span><div><b>#1047 · Jamie Ross</b><p>1 item · 46 min ago</p></div><span class="order-status packed">Packed</span></div><div class="order-item"><span class="order-avatar blue">SK</span><div><b>#1046 · Sam Kim</b><p>3 items · 1 hr ago</p></div><span class="order-status shipped">Shipped</span></div></div>
-          </aside>
-        </section>
-      </div>
-    </main>
-  </div>
-  <div class="toast" id="toast">Product added to your catalog <span>✓</span></div>
-  <div class="modal-backdrop" id="modal"><div class="modal"><button class="modal-close" id="modal-close">×</button><h2>Add a new product</h2><p>Bring a new piece into your catalog.</p><label>Product name<input id="new-product-name" placeholder="e.g. Linen camp shirt"></label><div class="form-row"><label>Collection<select><option>Men</option><option>Women</option><option>Children & toys</option></select></label><label>Price<input placeholder="$0.00"></label></div><button class="primary-button full" id="save-product">Add product</button></div></div>
-  <script src="script.js"></script>
+    </section>
+    <section class="story-band"><div><p class="eyebrow">Small shop, thoughtful choices</p><h2>Made for your<br><em>whole household.</em></h2></div><p>We choose pieces that work hard, feel good, and make room for a little more joy. From first layers to after-school playtime, AS FASHION HUB is here for the everyday.</p><a href="#shop">Explore the edit ↗</a></section>
+  </main>
+  <footer><a class="shop-logo" href="index.html"><span>AS</span> FASHION HUB</a><p>Everyday pieces for every kind of life.</p><div><a href="admin.html">Store management</a><a href="#shop">Shop</a><a href="#shop">Contact</a></div></footer>
+  <div class="cart-toast" id="cart-toast">Added to your bag <span>✓</span></div>
+  <script src="shop.js"></script>
 </body>
 </html>
